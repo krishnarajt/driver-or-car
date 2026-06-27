@@ -1,0 +1,20 @@
+F1 all-time starter analysis
+
+F1DB release files cover seasons 1950-2026.
+F1DB races: 1,171
+F1DB race result rows: 27,445
+F1DB qualifying result rows: 26,866
+F1DB fastest-lap rows: 16,999
+TracingInsights lap-time rows: 873,755
+TracingInsights lap-time coverage years: 1982-2026
+
+Constructor title match rates where a constructor champion exists:
+Qualifying proxy leader == constructor champion: 60.3% (41/68)
+Fastest-lap proxy leader == constructor champion: 70.6% (48/68)
+Race-win leader == constructor champion: 83.8% (57/68)
+Driver champion's primary constructor == constructor champion: 82.4% (56/68)
+
+Generated files:
+analysis/yearly_fastest_car_summary.csv
+analysis/driver_points_within_constructor.csv
+analysis/data_inventory.csv

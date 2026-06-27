@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Driver or Car? · Formula 1, 1950–2025</title>
+    <meta
+      name="description"
+      content="Was it the driver or the car? Teammate head-to-heads, race-by-race divergence, and strategy across every Formula 1 season."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ============================ HERO ============================ -->
+    <header class="hero">
+      <div class="hero__rails" aria-hidden="true"></div>
+      <nav class="topbar">
+        <a class="wordmark" href="#top">
+          <span class="wordmark__chip"></span>
+          DRIVER <span class="wordmark__or">or</span> CAR
+        </a>
+        <div class="topbar__meta" id="topbar-meta"></div>
+      </nav>
+
+      <div class="hero__inner" id="top">
+        <p class="kicker">The oldest argument in motorsport</p>
+        <h1 class="hero__title">
+          Was it the <span class="grad grad--driver">driver</span>,
+          or the <span class="grad grad--car">car</span>?
+        </h1>
+        <p class="hero__lede">
+          In Formula 1, teammates drive the <strong>same car</strong>, in the
+          <strong>same races</strong>. So if a result were purely about
+          machinery, two cars from one garage would finish far closer together
+          than they actually do. Here is the gap that opens up anyway&nbsp;&mdash;
+          and the driver, strategy and luck behind it.
+        </p>
+
+        <div class="hero__headline" id="hero-headline">
+          <div class="hero__bignum">
+            <span class="hero__bignum-value" id="hero-adjacent">…</span>
+            <span class="hero__bignum-unit">%</span>
+          </div>
+          <div class="hero__bigtext">
+            <p>
+              of the time do a team's two cars finish in
+              <strong>adjacent positions</strong>
+            </p>
+            <p class="hero__bigsub" id="hero-sub">Loading the field…</p>
+          </div>
+        </div>
+
+        <a class="hero__cta" href="#proof">See the evidence ↓</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===================== THE PROOF (global) ===================== -->
+      <section class="band" id="proof">
+        <div class="band__head">
+          <p class="eyebrow">Exhibit A · the whole field</p>
+          <h2>If it were just the car, this chart would be one tall bar.</h2>
+          <p class="band__sub" id="proof-sub">…</p>
+        </div>
+        <div class="gap-chart" id="gap-chart"></div>
+        <p class="footnote" id="proof-foot"></p>
+      </section>
+
+      <!-- =================== TEAMMATE DUEL (interactive) ============== -->
+      <section class="band band--alt" id="duel">
+        <div class="band__head">
+          <p class="eyebrow">Exhibit B · same car, two drivers</p>
+          <h2>The teammate duel</h2>
+          <p class="band__sub">
+            Pick a season and a team. Both drivers had effectively identical
+            machinery. Watch what the driver does with it.
+          </p>
+        </div>
+
+        <div class="controls">
+          <label class="control">
+            <span>Season</span>
+            <select id="season-select"></select>
+          </label>
+          <label class="control">
+            <span>Team</span>
+            <select id="team-select"></select>
+          </label>
+          <div class="control control--verdict" id="season-tag"></div>
+        </div>
+
+        <div class="duel" id="duel-card"></div>
+      </section>
+
+      <!-- ===================== SEASON VERDICT ========================= -->
+      <section class="band" id="verdict">
+        <div class="band__head">
+          <p class="eyebrow">The reading · <span id="verdict-year">…</span></p>
+          <h2 id="verdict-label">…</h2>
+        </div>
+        <div class="verdict" id="verdict-card"></div>
+        <p class="footnote">
+          Two transparent heuristics shown side by side&nbsp;&mdash; not a causal
+          verdict. <strong>Car force</strong> = the top team's share of all
+          constructor points (how much one machine dominated the grid).
+          <strong>Driver force</strong> = how far apart teammates in identical
+          cars finished (if the car decided everything, this would be zero).
+        </p>
+      </section>
+
+      <!-- ===================== STRATEGY & LUCK ======================== -->
+      <section class="band band--alt" id="strategy">
+        <div class="band__head">
+          <p class="eyebrow">Exhibit C · the third actor</p>
+          <h2>Strategy, reliability &amp; racecraft</h2>
+          <p class="band__sub">
+            The car sets the pace. Where it actually finishes is decided on
+            Sunday&nbsp;&mdash; overtakes, pit walls, and whether the thing
+            lasts the distance. <span id="strategy-year"></span>
+          </p>
+        </div>
+        <div class="strat-grid" id="strat-grid"></div>
+      </section>
+
+      <!-- ===================== FLAGSHIP DUELS ========================= -->
+      <section class="band" id="flagships">
+        <div class="band__head">
+          <p class="eyebrow">Hall of fame · same car, different planet</p>
+          <h2>The most lopsided teammate seasons ever</h2>
+          <p class="band__sub">
+            Among the widest teammate point gaps in F1 history&nbsp;&mdash; both
+            drivers ran most of the season in the same car and raced
+            wheel-to-wheel, yet the scorelines came out worlds apart.
+          </p>
+        </div>
+        <div class="flagships" id="flagship-grid"></div>
+      </section>
+
+      <!-- ============== SMALL MULTIPLES (every season) =============== -->
+      <section class="band" id="seasons-grid">
+        <div class="band__head">
+          <p class="eyebrow">Every season · the same shape</p>
+          <h2>It holds for every year of Formula 1</h2>
+          <p class="band__sub">
+            One sparkline per season: how teammates' finishing gaps were
+            distributed, from <b>adjacent</b> on the left to <b>10+ apart</b> on
+            the right. The first point is how often the two cars finished
+            together&nbsp;&mdash; notice how rarely it's the tall one. Same scale
+            on every chart, so you can read them side by side.
+          </p>
+        </div>
+        <div class="sm-legend" id="sm-legend"></div>
+        <div class="smallmults" id="smallmults"></div>
+      </section>
+
+      <!-- ===================== SUPPORTING DETAIL ====================== -->
+      <section class="band band--alt" id="detail">
+        <div class="band__head">
+          <p class="eyebrow">Supporting detail · <span id="detail-year">…</span></p>
+          <h2>Full season picture</h2>
+          <p class="band__sub">
+            Championship tables and the season's pace proxies&nbsp;&mdash; how
+            often the fastest car over one lap actually translated into the
+            title.
+          </p>
+        </div>
+        <div class="pace-grid" id="pace-grid"></div>
+        <div class="tables" id="tables"></div>
+      </section>
+
+      <div class="error" id="error" hidden></div>
+    </main>
+
+    <footer class="site-foot">
+      <div class="site-foot__grid" id="coverage"></div>
+      <p class="site-foot__note" id="source-note">…</p>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

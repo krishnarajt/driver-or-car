@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract Formula 1 racing lines</title>
+  <desc id="desc">An abstract dark racing circuit with red and yellow speed trails and a checkered panel.</desc>
+  <rect width="1100" height="620" fill="#171b22"/>
+  <path d="M110 442c92-133 210-204 354-213 118-8 191 30 219 91 28 62-5 118-76 130-78 14-173-20-218-77-42-53-40-116 14-162 58-49 158-71 283-63 135 9 237 55 314 138" fill="none" stroke="#303846" stroke-width="86" stroke-linecap="round"/>
+  <path d="M110 442c92-133 210-204 354-213 118-8 191 30 219 91 28 62-5 118-76 130-78 14-173-20-218-77-42-53-40-116 14-162 58-49 158-71 283-63 135 9 237 55 314 138" fill="none" stroke="#fafbfc" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+  <path d="M99 457c99-151 228-232 387-242 131-9 211 34 242 104" fill="none" stroke="#e10600" stroke-width="16" stroke-linecap="round"/>
+  <path d="M80 487c88-117 199-184 334-201 109-14 193 2 252 48" fill="none" stroke="#ffd447" stroke-width="8" stroke-linecap="round"/>
+  <path d="M312 151h180l-33 58H279z" fill="#e10600"/>
+  <path d="M502 151h180l-33 58H469z" fill="#ffffff" opacity=".9"/>
+  <path d="M692 151h180l-33 58H659z" fill="#e10600"/>
+  <g transform="translate(760 356) rotate(-11)">
+    <rect width="238" height="106" fill="#f6f7f9"/>
+    <g fill="#111318">
+      <rect x="0" y="0" width="34" height="26"/>
+      <rect x="68" y="0" width="34" height="26"/>
+      <rect x="136" y="0" width="34" height="26"/>
+      <rect x="204" y="0" width="34" height="26"/>
+      <rect x="34" y="26" width="34" height="26"/>
+      <rect x="102" y="26" width="34" height="26"/>
+      <rect x="170" y="26" width="34" height="26"/>
+      <rect x="0" y="52" width="34" height="26"/>
+      <rect x="68" y="52" width="34" height="26"/>
+      <rect x="136" y="52" width="34" height="26"/>
+      <rect x="204" y="52" width="34" height="26"/>
+      <rect x="34" y="78" width="34" height="28"/>
+      <rect x="102" y="78" width="34" height="28"/>
+      <rect x="170" y="78" width="34" height="28"/>
+    </g>
+  </g>
+  <circle cx="278" cy="286" r="8" fill="#2fc3ff"/>
+  <circle cx="702" cy="382" r="8" fill="#2fc3ff"/>
+  <circle cx="887" cy="232" r="8" fill="#2fc3ff"/>
+</svg>
